@@ -5,11 +5,11 @@ body {
 }
 
 .fi-sidebar {
-    @apply p-4 !important;
+    @apply !p-4;
 }
 
 .fi-sidebar-header {
-    @apply bg-transparent ring-0 shadow-none !important;
+    @apply !bg-transparent !ring-0 !shadow-none;
 }
 
 .fi-sidebar-item-active a {
