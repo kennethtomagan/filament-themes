@@ -69,7 +69,7 @@ class ThemesMakeCommand extends Command
 
         $path = (string) str($theme)
             ->prepend('/')
-            ->prepend($path ?? '')
+            ->prepend($path)
             ->replace('\\', '/')
             ->replace('//', '/')
             ->append('.php');
@@ -82,7 +82,7 @@ class ThemesMakeCommand extends Command
             'class' => $themeClass,
             'name' => $name,
             'panel' => $panelId,
-            'namespace' => str($namespace ?? '') . ($themeNamespace !== '' ? "\\{$themeNamespace}" : ''),
+            'namespace' => str($namespace) . ($themeNamespace !== '' ? "\\{$themeNamespace}" : ''),
             'method' => file_exists(base_path('vite.config.js')) ? 'viteTheme' : 'theme',
         ]);
 

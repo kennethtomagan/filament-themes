@@ -50,8 +50,10 @@ class ThemesPlugin implements Plugin
 
     public static function canView(): bool
     {
-        if (isset(static::get()->canViewCallback)) {
-            return (static::get()->canViewCallback)();
+        $instance = app(static::class);
+
+        if (isset($instance->canViewCallback)) {
+            return ($instance->canViewCallback)();
         }
 
         return true;

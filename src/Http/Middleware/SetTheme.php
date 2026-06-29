@@ -4,7 +4,7 @@ namespace KennethTomagan\FilamentThemes\Http\Middleware;
 
 use Closure;
 use Filament\Facades\Filament;
-use Filament\Navigation\MenuItem;
+use Filament\Actions\Action;
 use Filament\Support\Assets\Css;
 use Filament\Support\Facades\FilamentAsset;
 use Filament\Support\Facades\FilamentColor;
@@ -39,11 +39,11 @@ class SetTheme
          * Check if item already exists before adding it
          * to the menu items.
          */
-        if (! isset($panel->getUserMenuItems()[__('themes::themes.themes')])) {
+        if (! isset($panel->getUserMenuItems()['themes'])) {
             $panel->userMenuItems(
                 ThemesPlugin::canView() ?
                     [
-                        __('themes::themes.themes') => MenuItem::make('Themes')
+                        Action::make('themes')
                             ->label(fn () => __('themes::themes.themes'))
                             ->icon(config('themes.icon'))
                             ->url(ThemesPage::getUrl()),

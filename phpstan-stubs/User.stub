@@ -1,0 +1,11 @@
+<?php
+
+namespace Illuminate\Foundation\Auth;
+
+/**
+ * @property string|null $theme
+ * @property string|null $theme_color
+ */
+class User
+{
+}
