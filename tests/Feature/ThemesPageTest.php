@@ -10,7 +10,7 @@ it('declares a navigation icon compatible with Filament v4', function () {
 });
 
 it('exposes the registered themes to the view', function () {
-    $page = new Themes();
+    $page = new Themes;
 
     expect($page->getThemes()->keys()->all())
         ->toContain('default', 'dracula', 'nord', 'sunset');

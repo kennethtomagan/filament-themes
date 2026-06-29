@@ -6,10 +6,10 @@ use Filament\Facades\Filament;
 use Filament\Notifications\Notification;
 use Filament\Pages\Page;
 use Filament\Support\Colors\Color;
-use KennethTomagan\FilamentThemes\ThemesPlugin;
 use Illuminate\Contracts\Support\Htmlable;
 use Illuminate\Contracts\View\View;
 use Illuminate\Support\Arr;
+use KennethTomagan\FilamentThemes\ThemesPlugin;
 
 class Themes extends Page
 {

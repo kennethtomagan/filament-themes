@@ -3,15 +3,15 @@
 namespace KennethTomagan\FilamentThemes;
 
 use Filament\Facades\Filament;
+use Illuminate\Support\Arr;
+use Illuminate\Support\Collection;
+use InvalidArgumentException;
 use KennethTomagan\FilamentThemes\Contracts\HasChangeableColor;
 use KennethTomagan\FilamentThemes\Contracts\Theme;
 use KennethTomagan\FilamentThemes\Themes\DefaultTheme;
 use KennethTomagan\FilamentThemes\Themes\Dracula;
 use KennethTomagan\FilamentThemes\Themes\Nord;
 use KennethTomagan\FilamentThemes\Themes\Sunset;
-use Illuminate\Support\Arr;
-use Illuminate\Support\Collection;
-use InvalidArgumentException;
 
 class Themes
 {

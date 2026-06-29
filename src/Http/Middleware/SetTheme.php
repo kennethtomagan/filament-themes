@@ -3,11 +3,12 @@
 namespace KennethTomagan\FilamentThemes\Http\Middleware;
 
 use Closure;
-use Filament\Facades\Filament;
 use Filament\Actions\Action;
+use Filament\Facades\Filament;
 use Filament\Support\Assets\Css;
 use Filament\Support\Facades\FilamentAsset;
 use Filament\Support\Facades\FilamentColor;
+use Illuminate\Http\Request;
 use KennethTomagan\FilamentThemes\Contracts\CanModifyPanelConfig;
 use KennethTomagan\FilamentThemes\Contracts\HasOnlyDarkMode;
 use KennethTomagan\FilamentThemes\Contracts\HasOnlyLightMode;
@@ -18,7 +19,6 @@ use KennethTomagan\FilamentThemes\Themes\Dracula;
 use KennethTomagan\FilamentThemes\Themes\Nord;
 use KennethTomagan\FilamentThemes\Themes\Sunset;
 use KennethTomagan\FilamentThemes\ThemesPlugin;
-use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
 class SetTheme

@@ -3,9 +3,9 @@
 namespace KennethTomagan\FilamentThemes\Themes;
 
 use Filament\Support\Colors\Color;
+use Illuminate\Support\Arr;
 use KennethTomagan\FilamentThemes\Contracts\HasChangeableColor;
 use KennethTomagan\FilamentThemes\Contracts\Theme;
-use Illuminate\Support\Arr;
 
 class Sunset implements HasChangeableColor, Theme
 {
