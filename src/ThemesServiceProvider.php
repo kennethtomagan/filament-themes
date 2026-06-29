@@ -61,6 +61,8 @@ class ThemesServiceProvider extends PackageServiceProvider
         $this->app->singleton(Themes::class, function () {
             return new Themes;
         });
+
+        $this->app->singleton(ThemesPlugin::class);
     }
 
     public function packageBooted(): void
