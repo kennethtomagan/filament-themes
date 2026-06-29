@@ -13,7 +13,7 @@
         </header>
 
         <div class="flex items-center gap-4 border-t py-6">
-            @if ($this->getCurrentTheme() instanceof \Hasnayeen\Themes\Contracts\HasChangeableColor)
+            @if ($this->getCurrentTheme() instanceof \KennethTomagan\\FilamentThemes\Contracts\HasChangeableColor)
                 @foreach ($this->getColors() as $name => $color)
                     <button
                         wire:click="setColor('{{ $name }}')"
@@ -50,9 +50,9 @@
         <div class="grid grid-cols-1 gap-6 border-t py-6">
             @foreach ($this->getThemes() as $name => $theme)
                 @php
-                    $noLightMode = in_array(\Hasnayeen\Themes\Contracts\HasOnlyDarkMode::class, class_implements($theme));
-                    $noDarkMode = in_array(\Hasnayeen\Themes\Contracts\HasOnlyLightMode::class, class_implements($theme));
-                    $supportColorChange = in_array(\Hasnayeen\Themes\Contracts\HasChangeableColor::class, class_implements($theme));
+                    $noLightMode = in_array(\KennethTomagan\\FilamentThemes\Contracts\HasOnlyDarkMode::class, class_implements($theme));
+                    $noDarkMode = in_array(\KennethTomagan\\FilamentThemes\Contracts\HasOnlyLightMode::class, class_implements($theme));
+                    $supportColorChange = in_array(\KennethTomagan\\FilamentThemes\Contracts\HasChangeableColor::class, class_implements($theme));
                 @endphp
 
                 <x-filament::section>
@@ -137,8 +137,8 @@
                     </x-slot>
 
                     @php
-                        $noLightMode = in_array(\Hasnayeen\Themes\Contracts\HasOnlyDarkMode::class, class_implements($theme));
-                        $noDarkMode = in_array(\Hasnayeen\Themes\Contracts\HasOnlyLightMode::class, class_implements($theme));
+                        $noLightMode = in_array(\KennethTomagan\\FilamentThemes\Contracts\HasOnlyDarkMode::class, class_implements($theme));
+                        $noDarkMode = in_array(\KennethTomagan\\FilamentThemes\Contracts\HasOnlyLightMode::class, class_implements($theme));
                     @endphp
                     <div class="grid grid-cols-2 gap-4">
                         <div>
@@ -146,7 +146,7 @@
                                 <h3 class="text-sm font-semibold text-gray-600 pb-4">{{ __('themes::themes.no_light_mode') }}</h3>
                             @else
                                 <h3 class="text-sm font-semibold text-gray-600 pb-4">{{ __('themes::themes.light') }}</h3>
-                                <img src="{{ url('https://raw.githubusercontent.com/Hasnayeen/themes/3.x/assets/'.$name.'-light.png') }}" alt="{{ $name }} theme preview (light version)" class="border dark:border-gray-700 rounded-lg">
+                                <img src="{{ url('https://raw.githubusercontent.com/kennethtomagan/filament-themes/4.x/assets/'.$name.'-light.png') }}" alt="{{ $name }} theme preview (light version)" class="border dark:border-gray-700 rounded-lg">
                             @endif
                         </div>
         
@@ -155,7 +155,7 @@
                                 <h3 class="text-sm font-semibold text-gray-600 pb-4">{{ __('themes::themes.no_dark_mode') }}</h3>
                             @else
                                 <h3 class="text-sm font-semibold text-gray-600 pb-4">{{ __('themes::themes.dark') }}</h3>
-                                <img src="{{ url('https://raw.githubusercontent.com/Hasnayeen/themes/3.x/assets/'.$name.'-dark.png') }}" alt="{{ $name }} theme preview (dark version)" class="border dark:border-gray-700 rounded-lg">
+                                <img src="{{ url('https://raw.githubusercontent.com/kennethtomagan/filament-themes/4.x/assets/'.$name.'-dark.png') }}" alt="{{ $name }} theme preview (dark version)" class="border dark:border-gray-700 rounded-lg">
                             @endif
                         </div>
                     </div>

@@ -14,7 +14,7 @@ class UpgradeCommand extends Command
 
     public function handle(): int
     {
-        foreach (FilamentAsset::getStyles(['hasnayeen/themes']) as $asset) {
+        foreach (FilamentAsset::getStyles(['kennethtomagan/filament-themes']) as $asset) {
             $this->copyAsset($asset->getPath(), $asset->getPublicPath());
         }
 

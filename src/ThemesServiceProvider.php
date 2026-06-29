@@ -34,7 +34,7 @@ class ThemesServiceProvider extends PackageServiceProvider
                     ->publishConfigFile()
                     ->publishMigrations()
                     ->askToRunMigrations()
-                    ->askToStarRepoOnGitHub('hasnayeen/themes');
+                    ->askToStarRepoOnGitHub('kennethtomagan/filament-themes');
             });
 
         $configFileName = $package->shortName();
@@ -70,7 +70,7 @@ class ThemesServiceProvider extends PackageServiceProvider
         }
         if (class_exists(AboutCommand::class) && class_exists(InstalledVersions::class)) {
             AboutCommand::add('Themes', [
-                'Version' => InstalledVersions::getPrettyVersion('hasnayeen/themes'),
+                'Version' => InstalledVersions::getPrettyVersion('kennethtomagan/filament-themes'),
                 'Themes' => app(Themes::class)
                     ->getThemes()
                     ->map(fn ($item, $key) => $key)
@@ -81,7 +81,7 @@ class ThemesServiceProvider extends PackageServiceProvider
 
     protected function getAssetPackageName(): ?string
     {
-        return 'hasnayeen/themes';
+        return 'kennethtomagan/filament-themes';
     }
 
     /**

@@ -61,7 +61,7 @@ class SetTheme
                 Sunset::class => Css::make(Sunset::getName(), Sunset::getPath()),
                 default => Css::make(DefaultTheme::getName(), DefaultTheme::getPath()),
             },
-        ], 'hasnayeen/themes');
+        ], 'kennethtomagan/filament-themes');
 
         if (! $panel->hasDarkModeForced()) {
             $panel->darkMode(! $currentTheme instanceof HasOnlyLightMode, $currentTheme instanceof HasOnlyDarkMode);
