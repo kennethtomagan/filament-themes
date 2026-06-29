@@ -1,13 +1,13 @@
 <?php
 
-namespace Hasnayeen\Themes;
+namespace KennethTomagan\FilamentThemes;
 
 use Composer\InstalledVersions;
 use Filament\Support\Assets\Asset;
 use Filament\Support\Assets\Css;
 use Filament\Support\Facades\FilamentAsset;
-use Hasnayeen\Themes\Commands\ThemesMakeCommand;
-use Hasnayeen\Themes\Commands\UpgradeCommand;
+use KennethTomagan\FilamentThemes\Commands\ThemesMakeCommand;
+use KennethTomagan\FilamentThemes\Commands\UpgradeCommand;
 use Illuminate\Foundation\Console\AboutCommand;
 use Spatie\LaravelPackageTools\Commands\InstallCommand;
 use Spatie\LaravelPackageTools\Package;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Hasnayeen\Themes\Commands;
+namespace KennethTomagan\FilamentThemes\Commands;
 
 use Filament\Facades\Filament;
 use Filament\Panel;

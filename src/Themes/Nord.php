@@ -1,11 +1,11 @@
 <?php
 
-namespace Hasnayeen\Themes\Themes;
+namespace KennethTomagan\FilamentThemes\Themes;
 
 use Filament\Panel;
 use Filament\Support\Colors\Color;
-use Hasnayeen\Themes\Contracts\CanModifyPanelConfig;
-use Hasnayeen\Themes\Contracts\Theme;
+use KennethTomagan\FilamentThemes\Contracts\CanModifyPanelConfig;
+use KennethTomagan\FilamentThemes\Contracts\Theme;
 
 class Nord implements CanModifyPanelConfig, Theme
 {

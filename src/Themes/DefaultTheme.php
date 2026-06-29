@@ -1,10 +1,10 @@
 <?php
 
-namespace Hasnayeen\Themes\Themes;
+namespace KennethTomagan\FilamentThemes\Themes;
 
 use Filament\Support\Colors\Color;
-use Hasnayeen\Themes\Contracts\HasChangeableColor;
-use Hasnayeen\Themes\Contracts\Theme;
+use KennethTomagan\FilamentThemes\Contracts\HasChangeableColor;
+use KennethTomagan\FilamentThemes\Contracts\Theme;
 use Illuminate\Support\Arr;
 
 class DefaultTheme implements HasChangeableColor, Theme

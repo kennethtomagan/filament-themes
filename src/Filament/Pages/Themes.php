@@ -1,12 +1,12 @@
 <?php
 
-namespace Hasnayeen\Themes\Filament\Pages;
+namespace KennethTomagan\FilamentThemes\Filament\Pages;
 
 use Filament\Facades\Filament;
 use Filament\Notifications\Notification;
 use Filament\Pages\Page;
 use Filament\Support\Colors\Color;
-use Hasnayeen\Themes\ThemesPlugin;
+use KennethTomagan\FilamentThemes\ThemesPlugin;
 use Illuminate\Contracts\Support\Htmlable;
 use Illuminate\Contracts\View\View;
 use Illuminate\Support\Arr;
@@ -31,12 +31,12 @@ class Themes extends Page
 
     public function getThemes()
     {
-        return app(\Hasnayeen\Themes\Themes::class)->getThemes();
+        return app(\KennethTomagan\FilamentThemes\Themes::class)->getThemes();
     }
 
     public function getCurrentTheme()
     {
-        return app(\Hasnayeen\Themes\Themes::class)->getCurrentTheme();
+        return app(\KennethTomagan\FilamentThemes\Themes::class)->getCurrentTheme();
     }
 
     public function getColor()

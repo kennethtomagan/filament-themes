@@ -1,6 +1,6 @@
 <?php
 
-namespace Hasnayeen\Themes\Contracts;
+namespace KennethTomagan\FilamentThemes\Contracts;
 
 interface HasChangeableColor
 {

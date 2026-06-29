@@ -1,11 +1,11 @@
 <?php
 
-namespace Hasnayeen\Themes;
+namespace KennethTomagan\FilamentThemes;
 
 use Closure;
 use Filament\Contracts\Plugin;
 use Filament\Panel;
-use Hasnayeen\Themes\Filament\Pages\Themes as ThemesPage;
+use KennethTomagan\FilamentThemes\Filament\Pages\Themes as ThemesPage;
 
 class ThemesPlugin implements Plugin
 {

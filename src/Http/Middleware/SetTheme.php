@@ -1,6 +1,6 @@
 <?php
 
-namespace Hasnayeen\Themes\Http\Middleware;
+namespace KennethTomagan\FilamentThemes\Http\Middleware;
 
 use Closure;
 use Filament\Facades\Filament;
@@ -8,16 +8,16 @@ use Filament\Navigation\MenuItem;
 use Filament\Support\Assets\Css;
 use Filament\Support\Facades\FilamentAsset;
 use Filament\Support\Facades\FilamentColor;
-use Hasnayeen\Themes\Contracts\CanModifyPanelConfig;
-use Hasnayeen\Themes\Contracts\HasOnlyDarkMode;
-use Hasnayeen\Themes\Contracts\HasOnlyLightMode;
-use Hasnayeen\Themes\Filament\Pages\Themes as ThemesPage;
-use Hasnayeen\Themes\Themes;
-use Hasnayeen\Themes\Themes\DefaultTheme;
-use Hasnayeen\Themes\Themes\Dracula;
-use Hasnayeen\Themes\Themes\Nord;
-use Hasnayeen\Themes\Themes\Sunset;
-use Hasnayeen\Themes\ThemesPlugin;
+use KennethTomagan\FilamentThemes\Contracts\CanModifyPanelConfig;
+use KennethTomagan\FilamentThemes\Contracts\HasOnlyDarkMode;
+use KennethTomagan\FilamentThemes\Contracts\HasOnlyLightMode;
+use KennethTomagan\FilamentThemes\Filament\Pages\Themes as ThemesPage;
+use KennethTomagan\FilamentThemes\Themes;
+use KennethTomagan\FilamentThemes\Themes\DefaultTheme;
+use KennethTomagan\FilamentThemes\Themes\Dracula;
+use KennethTomagan\FilamentThemes\Themes\Nord;
+use KennethTomagan\FilamentThemes\Themes\Sunset;
+use KennethTomagan\FilamentThemes\ThemesPlugin;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 

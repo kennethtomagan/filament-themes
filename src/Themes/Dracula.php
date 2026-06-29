@@ -1,9 +1,9 @@
 <?php
 
-namespace Hasnayeen\Themes\Themes;
+namespace KennethTomagan\FilamentThemes\Themes;
 
-use Hasnayeen\Themes\Contracts\HasOnlyDarkMode;
-use Hasnayeen\Themes\Contracts\Theme;
+use KennethTomagan\FilamentThemes\Contracts\HasOnlyDarkMode;
+use KennethTomagan\FilamentThemes\Contracts\Theme;
 
 class Dracula implements HasOnlyDarkMode, Theme
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Hasnayeen\Themes\Tests;
+namespace KennethTomagan\FilamentThemes\Tests;
 
 use BladeUI\Heroicons\BladeHeroiconsServiceProvider;
 use BladeUI\Icons\BladeIconsServiceProvider;
@@ -14,7 +14,7 @@ use Filament\SpatieLaravelTranslatablePluginServiceProvider;
 use Filament\Support\SupportServiceProvider;
 use Filament\Tables\TablesServiceProvider;
 use Filament\Widgets\WidgetsServiceProvider;
-use Hasnayeen\Themes\ThemesServiceProvider;
+use KennethTomagan\FilamentThemes\ThemesServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Livewire\LivewireServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
@@ -27,7 +27,7 @@ class TestCase extends Orchestra
         parent::setUp();
 
         Factory::guessFactoryNamesUsing(
-            fn (string $modelName) => 'Hasnayeen\\Themes\\Database\\Factories\\' . class_basename($modelName) . 'Factory'
+            fn (string $modelName) => 'KennethTomagan\\FilamentThemes\\Database\\Factories\\' . class_basename($modelName) . 'Factory'
         );
     }
 

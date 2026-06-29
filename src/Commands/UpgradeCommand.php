@@ -1,6 +1,6 @@
 <?php
 
-namespace Hasnayeen\Themes\Commands;
+namespace KennethTomagan\FilamentThemes\Commands;
 
 use Filament\Support\Facades\FilamentAsset;
 use Illuminate\Console\Command;

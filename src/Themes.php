@@ -1,14 +1,14 @@
 <?php
 
-namespace Hasnayeen\Themes;
+namespace KennethTomagan\FilamentThemes;
 
 use Filament\Facades\Filament;
-use Hasnayeen\Themes\Contracts\HasChangeableColor;
-use Hasnayeen\Themes\Contracts\Theme;
-use Hasnayeen\Themes\Themes\DefaultTheme;
-use Hasnayeen\Themes\Themes\Dracula;
-use Hasnayeen\Themes\Themes\Nord;
-use Hasnayeen\Themes\Themes\Sunset;
+use KennethTomagan\FilamentThemes\Contracts\HasChangeableColor;
+use KennethTomagan\FilamentThemes\Contracts\Theme;
+use KennethTomagan\FilamentThemes\Themes\DefaultTheme;
+use KennethTomagan\FilamentThemes\Themes\Dracula;
+use KennethTomagan\FilamentThemes\Themes\Nord;
+use KennethTomagan\FilamentThemes\Themes\Sunset;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
 use InvalidArgumentException;

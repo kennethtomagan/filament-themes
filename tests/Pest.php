@@ -1,5 +1,5 @@
 <?php
 
-use Hasnayeen\Themes\Tests\TestCase;
+use KennethTomagan\FilamentThemes\Tests\TestCase;
 
 uses(TestCase::class)->in(__DIR__);
