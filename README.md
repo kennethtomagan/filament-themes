@@ -1,11 +1,13 @@
 # Themes for Filament panels
 
-![preview](https://raw.githubusercontent.com/Hasnayeen/themes/3.x/assets/preview.png)
+![preview](https://raw.githubusercontent.com/kennethtomagan/filament-themes/4.x/assets/preview.png)
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/hasnayeen/themes.svg?style=flat-square)](https://packagist.org/packages/hasnayeen/themes)
-[![Total Downloads](https://img.shields.io/packagist/dt/hasnayeen/themes.svg?style=flat-square)](https://packagist.org/packages/hasnayeen/themes)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/kennethtomagan/filament-themes.svg?style=flat-square)](https://packagist.org/packages/kennethtomagan/filament-themes)
+[![Total Downloads](https://img.shields.io/packagist/dt/kennethtomagan/filament-themes.svg?style=flat-square)](https://packagist.org/packages/kennethtomagan/filament-themes)
 
 `Themes` is a Filament plugin that allows users to set themes from a collection and customize the color of the selected theme. The package provides a simple and easy-to-use interface for selecting and applying themes to Filament panels.
+
+> This package is a fork of [hasnayeen/themes](https://github.com/Hasnayeen/themes), updated to be compatible with **Filament v4** (PHP 8.2+) and **Tailwind CSS v4**.
 
 ## Available For Hire
 
@@ -18,7 +20,7 @@ I'm also available for contractual work on this stack (Filament, Laravel, Livewi
 You can install the package via composer:
 
 ```bash
-composer require hasnayeen/themes
+composer require kennethtomagan/filament-themes
 ```
 
 Publish plugin assets by running following commands
@@ -87,12 +89,12 @@ You'll have to register the plugin in your panel provider
         return $panel
             ...
             ->plugin(
-                \Hasnayeen\Themes\ThemesPlugin::make()
+                \KennethTomagan\FilamentThemes\ThemesPlugin::make()
             );
     }
 ```
 
-Add `Hasnayeen\Themes\Http\Middleware\SetTheme` middleware to your provider `middleware` method or if you're using filament multi-tenancy then instead add to `tenantMiddleware` method.
+Add `KennethTomagan\FilamentThemes\Http\Middleware\SetTheme` middleware to your provider `middleware` method or if you're using filament multi-tenancy then instead add to `tenantMiddleware` method.
 
 ```php
     public function panel(Panel $panel): Panel
@@ -101,19 +103,19 @@ Add `Hasnayeen\Themes\Http\Middleware\SetTheme` middleware to your provider `mid
             ...
             ->middleware([
                 ...
-                \Hasnayeen\Themes\Http\Middleware\SetTheme::class
+                \KennethTomagan\FilamentThemes\Http\Middleware\SetTheme::class
             ])
             // or in `tenantMiddleware` if you're using multi-tenancy
             ->tenantMiddleware([
                 ...
-                \Hasnayeen\Themes\Http\Middleware\SetTheme::class
+                \KennethTomagan\FilamentThemes\Http\Middleware\SetTheme::class
             ])
     }
 ```
 
 This plugin provides a themes setting page. You can visit the page from user menu.
 
-![page-menu-link](https://raw.githubusercontent.com/Hasnayeen/themes/3.x/assets/page-menu-link.png)
+![page-menu-link](https://raw.githubusercontent.com/kennethtomagan/filament-themes/4.x/assets/page-menu-link.png)
 
 ## Authorization
 
@@ -124,7 +126,7 @@ You can configure the authorization of themes settings page and user menu option
     {
         return $panel
             ->plugin(
-                \Hasnayeen\Themes\ThemesPlugin::make()
+                \KennethTomagan\FilamentThemes\ThemesPlugin::make()
                     ->canViewThemesPage(fn () => auth()->user()?->is_admin)
             );
     }
@@ -139,7 +141,7 @@ You can [create new custom theme](#create-custom-theme) and register them via `r
     {
         return $panel
             ->plugin(
-                \Hasnayeen\Themes\ThemesPlugin::make()
+                \KennethTomagan\FilamentThemes\ThemesPlugin::make()
                     ->registerTheme([MyCustomTheme::getName() => MyCustomTheme::class])
             );
     }
@@ -152,11 +154,11 @@ You can also remove plugins default theme set by providing `override` argument a
     {
         return $panel
             ->plugin(
-                \Hasnayeen\Themes\ThemesPlugin::make()
+                \KennethTomagan\FilamentThemes\ThemesPlugin::make()
                     ->registerTheme(
                         [
                             MyCustomTheme::class,
-                            \Hasnayeen\Themes\Themes\Sunset::class,
+                            \KennethTomagan\FilamentThemes\Themes\Sunset::class,
                         ],
                         override: true,
                     )
@@ -176,8 +178,8 @@ This will create the following class
 
 ```php
 use Filament\Panel;
-use Hasnayeen\Themes\Contracts\CanModifyPanelConfig;
-use Hasnayeen\Themes\Contracts\Theme;
+use KennethTomagan\FilamentThemes\Contracts\CanModifyPanelConfig;
+use KennethTomagan\FilamentThemes\Contracts\Theme;
 
 class Awesome implements CanModifyPanelConfig, Theme
 {
@@ -207,13 +209,13 @@ class Awesome implements CanModifyPanelConfig, Theme
 }
 ```
 
-If your theme support changing primary color then implement `Hasnayeen\Themes\Contracts\HasChangeableColor` interface and `getPrimaryColor` method.
+If your theme support changing primary color then implement `KennethTomagan\FilamentThemes\Contracts\HasChangeableColor` interface and `getPrimaryColor` method.
 
 If your theme need to change panel config then do so inside `modifyPanelConfig` method in your theme.
 
 ```php
-use Hasnayeen\Themes\Contracts\CanModifyPanelConfig;
-use Hasnayeen\Themes\Contracts\Theme;
+use KennethTomagan\FilamentThemes\Contracts\CanModifyPanelConfig;
+use KennethTomagan\FilamentThemes\Contracts\Theme;
 
 class Awesome implement CanModifyPanelConfig, Theme
 {
@@ -232,23 +234,23 @@ Next add a new item to the `input` array of `vite.config.js`: `resources/css/awe
 
 Dracula (dark)
 
-![dracula-dark](https://raw.githubusercontent.com/Hasnayeen/themes/3.x/assets/dracula-dark.png)
+![dracula-dark](https://raw.githubusercontent.com/kennethtomagan/filament-themes/4.x/assets/dracula-dark.png)
 
 Nord (light)
 
-![nord-light](https://raw.githubusercontent.com/Hasnayeen/themes/3.x/assets/nord-light.png)
+![nord-light](https://raw.githubusercontent.com/kennethtomagan/filament-themes/4.x/assets/nord-light.png)
 
 Nord (dark)
 
-![nord-dark](https://raw.githubusercontent.com/Hasnayeen/themes/3.x/assets/nord-dark.png)
+![nord-dark](https://raw.githubusercontent.com/kennethtomagan/filament-themes/4.x/assets/nord-dark.png)
 
 Sunset (light)
 
-![sunset-light](https://raw.githubusercontent.com/Hasnayeen/themes/3.x/assets/sunset-light.png)
+![sunset-light](https://raw.githubusercontent.com/kennethtomagan/filament-themes/4.x/assets/sunset-light.png)
 
 Sunset (dark)
 
-![sunset-dark](https://raw.githubusercontent.com/Hasnayeen/themes/3.x/assets/sunset-dark.png)
+![sunset-dark](https://raw.githubusercontent.com/kennethtomagan/filament-themes/4.x/assets/sunset-dark.png)
 
 ## Upgrading
 
@@ -283,7 +285,9 @@ Please review [our security policy](../../security/policy) on how to report secu
 
 ## Credits
 
-- [Hasnayeen](https://github.com/Hasnayeen)
+- Forked from [hasnayeen/themes](https://github.com/Hasnayeen/themes)
+- [Hasnayeen](https://github.com/Hasnayeen) (original author)
+- [Kenneth Tomagan](https://github.com/kennethtomagan)
 - [All Contributors](../../contributors)
 
 ## License
