@@ -39,7 +39,7 @@ class SetTheme
          * Check if item already exists before adding it
          * to the menu items.
          */
-        if (! isset($panel->getUserMenuItems()['themes'])) {
+        if (Filament::auth()->check() && ! isset($panel->getUserMenuItems()['themes'])) {
             $panel->userMenuItems(
                 ThemesPlugin::canView() ?
                     [
