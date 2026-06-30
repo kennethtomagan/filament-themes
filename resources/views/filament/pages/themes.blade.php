@@ -12,7 +12,7 @@
             </div>
         </header>
 
-        <div class="flex items-center gap-4 border-t py-6">
+        <div class="flex items-center gap-4 border-t py-4">
             @if ($this->getCurrentTheme() instanceof \KennethTomagan\FilamentThemes\Contracts\HasChangeableColor)
                 @foreach ($this->getColors() as $name => $color)
                     <button
@@ -47,7 +47,7 @@
             </div>
         </header>
 
-        <div class="grid grid-cols-1 gap-6 border-t py-6">
+        <div class="grid grid-cols-1 gap-6 border-t py-4">
             @foreach ($this->getThemes() as $name => $theme)
                 @php
                     $noLightMode = in_array(\KennethTomagan\FilamentThemes\Contracts\HasOnlyDarkMode::class, class_implements($theme));
