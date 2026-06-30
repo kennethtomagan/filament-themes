@@ -36,12 +36,10 @@ body {
     @apply !h-screen;
 }
 
+/* In Filament v4 the topbar element itself is `<nav class="fi-topbar">`
+   (v3 nested a <nav> inside .fi-topbar), so apply the background directly. */
 .fi-topbar {
-    @apply relative;
-}
-
-.fi-topbar nav {
-    @apply bg-primary-50 dark:bg-gray-950 ring-0 shadow-none;
+    @apply relative bg-primary-50 dark:bg-gray-950 ring-0 shadow-none;
 }
 
 .fi-main {
