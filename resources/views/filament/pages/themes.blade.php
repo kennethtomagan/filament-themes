@@ -13,7 +13,7 @@
         </header>
 
         <div class="flex items-center gap-4 border-t py-6">
-            @if ($this->getCurrentTheme() instanceof \KennethTomagan\\FilamentThemes\Contracts\HasChangeableColor)
+            @if ($this->getCurrentTheme() instanceof \KennethTomagan\FilamentThemes\Contracts\HasChangeableColor)
                 @foreach ($this->getColors() as $name => $color)
                     <button
                         wire:click="setColor('{{ $name }}')"
@@ -50,9 +50,9 @@
         <div class="grid grid-cols-1 gap-6 border-t py-6">
             @foreach ($this->getThemes() as $name => $theme)
                 @php
-                    $noLightMode = in_array(\KennethTomagan\\FilamentThemes\Contracts\HasOnlyDarkMode::class, class_implements($theme));
-                    $noDarkMode = in_array(\KennethTomagan\\FilamentThemes\Contracts\HasOnlyLightMode::class, class_implements($theme));
-                    $supportColorChange = in_array(\KennethTomagan\\FilamentThemes\Contracts\HasChangeableColor::class, class_implements($theme));
+                    $noLightMode = in_array(\KennethTomagan\FilamentThemes\Contracts\HasOnlyDarkMode::class, class_implements($theme));
+                    $noDarkMode = in_array(\KennethTomagan\FilamentThemes\Contracts\HasOnlyLightMode::class, class_implements($theme));
+                    $supportColorChange = in_array(\KennethTomagan\FilamentThemes\Contracts\HasChangeableColor::class, class_implements($theme));
                 @endphp
 
                 <x-filament::section>
@@ -137,8 +137,8 @@
                     </x-slot>
 
                     @php
-                        $noLightMode = in_array(\KennethTomagan\\FilamentThemes\Contracts\HasOnlyDarkMode::class, class_implements($theme));
-                        $noDarkMode = in_array(\KennethTomagan\\FilamentThemes\Contracts\HasOnlyLightMode::class, class_implements($theme));
+                        $noLightMode = in_array(\KennethTomagan\FilamentThemes\Contracts\HasOnlyDarkMode::class, class_implements($theme));
+                        $noDarkMode = in_array(\KennethTomagan\FilamentThemes\Contracts\HasOnlyLightMode::class, class_implements($theme));
                     @endphp
                     <div class="grid grid-cols-2 gap-4">
                         <div>
